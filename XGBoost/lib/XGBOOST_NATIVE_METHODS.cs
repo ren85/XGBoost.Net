@@ -59,5 +59,22 @@ namespace XGBoost.lib
     public static extern int XGBoosterDumpModel(IntPtr handle, string fmap,
                                                 int with_stats, out int out_len,
                                                 out string[] dumpStr);
-  }
+
+
+        /*!
+ * \brief dump model, return array of strings representing model dump
+ * \param handle handle
+ * \param fnum number of features
+ * \param fname names of features
+ * \param ftype types of features
+ * \param with_stats whether to dump with statistics
+ * \param out_len length of output array
+ * \param out_models pointer to hold representing dump of each model
+ * \return 0 when success, -1 when failure happens
+ */
+        //[DllImport(dllLocation)]
+        //public static extern int XGBoosterDumpModelWithFeatures(IntPtr handle, int fnum, string[] fname, string[] ftype, int with_stats, out ulong out_len, out string[] out_models);
+        
+    }
 }
+
